@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.frontend.ui.theme.FrontendTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,4 +44,9 @@ fun GreetingPreview() {
     FrontendTheme {
         Greeting("Android")
     }
+}
+
+@Composable
+fun FrontendTheme(content: @Composable () -> Unit) {
+    TODO("Not yet implemented")
 }
