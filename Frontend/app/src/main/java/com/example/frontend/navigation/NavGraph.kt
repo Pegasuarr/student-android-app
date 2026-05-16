@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.frontend.ui.screen.auth.ForgotPasswordScreen
 import com.example.frontend.ui.screen.auth.LoginScreen
 import com.example.frontend.ui.screen.auth.RegisterScreen
 
@@ -26,7 +27,7 @@ fun NavGraph(
                     navController.navigate(Screen.Register.route)
                 },
                 onForgotPasswordClick = {
-                    // TODO: forgot password screen
+                    navController.navigate(Screen.ForgotPassword.route)
                 },
                 onGoogleSignInClick = {
                     // TODO: google sign in
@@ -42,7 +43,18 @@ fun NavGraph(
                     }
                 },
                 onLoginClick = {
-                    navController.popBackStack() // back arrow & "Log In" link
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(Screen.ForgotPassword.route) {
+            ForgotPasswordScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onSubmitClick = {
+                    // TODO: hook up to API later
                 }
             )
         }
