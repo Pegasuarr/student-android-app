@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -65,7 +66,9 @@ private val ErrorColor           = Color(0xFFE53935)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterScreen(
-    onRegisterClick: () -> Unit = {},
+    isLoading: Boolean = false,
+    errorMessage: String? = null,
+    onRegisterClick: (String, String, String) -> Unit = { _, _, _ -> },
     onLoginClick: () -> Unit = {}
 ) {
     var fullName    by remember { mutableStateOf("") }
@@ -252,6 +255,16 @@ fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
+            errorMessage?.let {
+                Text(
+                    text = it,
+                    color = ErrorColor,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.padding(bottom = 12.dp)
+                )
+            }
+
             // Register gradient button
             Box(
                 modifier = Modifier
@@ -265,19 +278,27 @@ fun RegisterScreen(
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Button(
-                    onClick = onRegisterClick,
-                    modifier = Modifier.fillMaxSize(),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
-                    shape = RoundedCornerShape(50),
-                    elevation = ButtonDefaults.buttonElevation(0.dp, 0.dp)
-                ) {
-                    Text(
-                        text = "Register",
-                        color = Color.White,
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.SemiBold
-                    )
+                if (isLoading) {
+                    CircularProgressIndicator(color = Color.White, modifier = Modifier.size(24.dp))
+                } else {
+                    Button(
+                        onClick = {
+                            if (pw == cfPw && fullName.isNotEmpty() && email.isNotEmpty() && pw.isNotEmpty()) {
+                                onRegisterClick(fullName, email, pw)
+                            }
+                        },
+                        modifier = Modifier.fillMaxSize(),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        shape = RoundedCornerShape(50),
+                        elevation = ButtonDefaults.buttonElevation(0.dp, 0.dp)
+                    ) {
+                        Text(
+                            text = "Register",
+                            color = Color.White,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    }
                 }
             }
 

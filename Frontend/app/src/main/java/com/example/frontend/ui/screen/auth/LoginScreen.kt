@@ -22,6 +22,7 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
@@ -57,10 +58,13 @@ private val TextFieldBorderColor   = Color(0xFFCCCCCC)
 private val HintTextColor          = Color(0xFFAAAAAA)
 private val TextPrimaryColor       = Color(0xFF1A1A2E)
 private val LinkColor              = Color(0xFF6C63FF)
+private val ErrorColor             = Color(0xFFE53935)
 
 @Composable
 fun LoginScreen(
-    onLoginClick: () -> Unit = {},
+    isLoading: Boolean = false,
+    errorMessage: String? = null,
+    onLoginClick: (String, String) -> Unit = { _, _ -> },
     onGoogleSignInClick: () -> Unit = {},
     onForgotPasswordClick: () -> Unit = {},
     onRegisterClick: () -> Unit = {},
@@ -168,6 +172,16 @@ fun LoginScreen(
 
         Spacer(modifier = Modifier.height(4.dp))
 
+        errorMessage?.let {
+            Text(
+                text = it,
+                color = ErrorColor,
+                fontSize = 13.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+        }
+
         // Log In gradient button
         Box(
             modifier = Modifier
@@ -181,19 +195,23 @@ fun LoginScreen(
                 ),
             contentAlignment = Alignment.Center
         ) {
-            Button(
-                onClick = onLoginClick,
-                modifier = Modifier.fillMaxSize(),
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
-                shape = RoundedCornerShape(50),
-                elevation = ButtonDefaults.buttonElevation(0.dp, 0.dp)
-            ) {
-                Text(
-                    text = "Log In",
-                    color = Color.White,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.SemiBold
-                )
+            if (isLoading) {
+                CircularProgressIndicator(color = Color.White, modifier = Modifier.size(24.dp))
+            } else {
+                Button(
+                    onClick = { onLoginClick(email, password) },
+                    modifier = Modifier.fillMaxSize(),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                    shape = RoundedCornerShape(50),
+                    elevation = ButtonDefaults.buttonElevation(0.dp, 0.dp)
+                ) {
+                    Text(
+                        text = "Log In",
+                        color = Color.White,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                }
             }
         }
 
