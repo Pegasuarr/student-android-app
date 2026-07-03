@@ -22,6 +22,7 @@
         <jjwt.version>0.11.5</jjwt.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <springdoc.version>2.5.0</springdoc.version>
+        <lombok.version>1.18.46</lombok.version>
     </properties>
 
     <dependencies>
