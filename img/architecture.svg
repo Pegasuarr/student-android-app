@@ -1,0 +1,419 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 920" width="100%" height="100%" style="background-color: #080B10;">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="rgba(255, 255, 255, 0.05)" />
+      <line x1="0" y1="20" x2="40" y2="20" stroke="rgba(255,255,255,0.015)" stroke-width="1"/>
+      <line x1="20" y1="0" x2="20" y2="40" stroke="rgba(255,255,255,0.015)" stroke-width="1"/>
+    </pattern>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#3B82F6" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#F59E0B" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350F" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#B45309" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#A78BFA" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C1D95" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#6D28D9" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#EC4899" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#BE185D" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#10B981" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#06B6D4" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#164E63" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0891B2" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#EF4444" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F1D1D" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#B91C1C" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-rose" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#F43F5E" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#881337" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#BE123C" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#14B8A6" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#115E59" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0F766E" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow-sky" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#38BDF8" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feComponentTransfer in="glow" result="glow_dim">
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow_dim" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="grad-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C4A6E" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.3" />
+    </linearGradient>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#3B82F6" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#F59E0B" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#A78BFA" />
+    </marker>
+    <marker id="arrow-pink" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#EC4899" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#10B981" />
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#06B6D4" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#EF4444" />
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#F43F5E" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#14B8A6" />
+    </marker>
+    <marker id="arrow-sky" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38BDF8" />
+    </marker>
+  </defs>
+  <rect width="1100" height="920" fill="url(#grid)" />
+  <g transform="translate(550, 45)" text-anchor="middle">
+    <text fill="#FFFFFF" font-size="24" font-weight="800" font-family="system-ui, sans-serif" letter-spacing="1">STUDENT MANAGEMENT SYSTEM</text>
+    <text fill="rgba(255,255,255,0.4)" font-size="13" font-family="system-ui, sans-serif" y="25" letter-spacing="0.5">Proposed Microservices Architecture &amp; Event-Driven Flow</text>
+  </g>
+  <rect x="80" y="85" width="940" height="100" rx="15" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="95" y="105" fill="rgba(255,255,255,0.15)" font-size="10" font-family="system-ui, sans-serif" font-weight="700" letter-spacing="1">CLIENT LAYER</text>
+  <rect x="80" y="210" width="940" height="110" rx="15" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="95" y="230" fill="rgba(255,255,255,0.15)" font-size="10" font-family="system-ui, sans-serif" font-weight="700" letter-spacing="1">ROUTING &amp; DISCOVERY LAYER</text>
+  <rect x="80" y="370" width="940" height="120" rx="15" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="95" y="390" fill="rgba(255,255,255,0.15)" font-size="10" font-family="system-ui, sans-serif" font-weight="700" letter-spacing="1">CORE MICROSERVICES LAYER</text>
+  <rect x="80" y="520" width="940" height="105" rx="15" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="95" y="538" fill="rgba(255,255,255,0.15)" font-size="10" font-family="system-ui, sans-serif" font-weight="700" letter-spacing="1">DATA &amp; CACHE LAYER</text>
+  <rect x="80" y="750" width="940" height="125" rx="15" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="95" y="770" fill="rgba(255,255,255,0.15)" font-size="10" font-family="system-ui, sans-serif" font-weight="700" letter-spacing="1">INTEGRATION &amp; ALERTS LAYER</text>
+  <path d="M 550,170 L 550,230" fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-blue)" filter="url(#glow-blue)" opacity="0.85" />
+  <text x="560" y="200" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">HTTP/REST</text>
+  <path d="M 450,265 L 245,265 L 245,390" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-orange)" filter="url(#glow-orange)" opacity="0.85" />
+  <text x="555" y="350" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">/api/auth/**</text>
+  <path d="M 550,300 L 550,390" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-orange)" filter="url(#glow-orange)" opacity="0.85" />
+  <text x="555" y="350" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">/api/students/**</text>
+  <path d="M 650,265 L 855,265 L 855,390" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-orange)" filter="url(#glow-orange)" opacity="0.85" />
+  <text x="555" y="350" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">/api/grades/**</text>
+  <path d="M 200,390 L 200,330 L 230,330 L 230,300" fill="none" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-purple)" filter="none" opacity="0.85" />
+  <text x="195" y="345" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">Register</text>
+  <path d="M 490,390 L 490,330 L 230,330 L 230,300" fill="none" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-purple)" filter="none" opacity="0.85" />
+  <path d="M 800,390 L 800,330 L 230,330 L 230,300" fill="none" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-purple)" filter="none" opacity="0.85" />
+  <path d="M 870,300 L 870,360 L 310,360 L 310,390" fill="none" stroke="#EC4899" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-pink)" filter="none" opacity="0.85" />
+  <text x="875" y="345" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">Load Config</text>
+  <path d="M 870,300 L 870,360 L 610,360 L 610,390" fill="none" stroke="#EC4899" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-pink)" filter="none" opacity="0.85" />
+  <path d="M 870,300 L 870,360 L 920,360 L 920,390" fill="none" stroke="#EC4899" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-pink)" filter="none" opacity="0.85" />
+  <path d="M 245,470 L 245,540" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-cyan)" filter="none" opacity="0.85" />
+  <path d="M 495,470 L 495,505 L 480,505 L 480,540" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-cyan)" filter="none" opacity="0.85" />
+  <path d="M 605,470 L 605,505 L 615,505 L 615,540" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-red)" filter="none" opacity="0.85" />
+  <path d="M 800,470 L 800,505 L 785,505 L 785,540" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-cyan)" filter="none" opacity="0.85" />
+  <path d="M 910,470 L 910,505 L 920,505 L 920,540" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-red)" filter="none" opacity="0.85" />
+  <path d="M 550,470 L 550,670" fill="none" stroke="#F43F5E" stroke-width="2" stroke-dasharray="6 3 1 3" marker-end="url(#arrow-rose)" filter="none" opacity="0.85" />
+  <text x="860" y="500" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">Publish</text>
+  <path d="M 855,470 L 855,670" fill="none" stroke="#F43F5E" stroke-width="2" stroke-dasharray="6 3 1 3" marker-end="url(#arrow-rose)" filter="none" opacity="0.85" />
+  <text x="860" y="500" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">Publish</text>
+  <path d="M 550,720 L 550,780" fill="none" stroke="#F43F5E" stroke-width="2" stroke-dasharray="6 3 1 3" marker-end="url(#arrow-rose)" filter="none" opacity="0.85" />
+  <text x="555" y="750" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">Subscribe</text>
+  <path d="M 645,817 L 760,817" fill="none" stroke="#38BDF8" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrow-sky)" filter="url(#glow-sky)" opacity="0.85" />
+  <text x="670" y="810" fill="rgba(255,255,255,0.4)" font-size="9" font-family="system-ui, sans-serif" font-weight="600">Alerts</text>
+  <!-- Node: Kotlin Android App -->
+  <g>
+    <rect x="450" y="100" width="200" height="70" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="450" y="100" width="200" height="70" rx="12" ry="12" fill="url(#grad-blue)" stroke="#3B82F6" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(464, 123)">
+      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="#60A5FA" stroke-width="2" fill="none"/>
+               <line x1="12" y1="18" x2="12.01" y2="18" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="500" y="132" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Kotlin Android App</text>
+    <text x="500" y="149" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Frontend Client</text>
+  </g>
+  <!-- Node: API Gateway -->
+  <g>
+    <rect x="450" y="230" width="200" height="70" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="450" y="230" width="200" height="70" rx="12" ry="12" fill="url(#grad-orange)" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(464, 253)">
+      <path d="M9 3H5a2 2 0 0 0-2 2v4m16-6h4a2 2 0 0 1 2 2v4M3 15v4a2 2 0 0 0 2 2h4m10 0h4a2 2 0 0 0 2-2v-4M9 12h6m-3-3 3 3-3 3" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <text x="500" y="262" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">API Gateway</text>
+    <text x="500" y="279" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Spring Cloud Gateway</text>
+  </g>
+  <!-- Node: Service Registry -->
+  <g>
+    <rect x="150" y="230" width="180" height="70" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="150" y="230" width="180" height="70" rx="12" ry="12" fill="url(#grad-purple)" stroke="#A78BFA" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(164, 253)">
+      <circle cx="12" cy="12" r="10" stroke="#A78BFA" stroke-width="2" fill="none"/>
+               <circle cx="12" cy="12" r="6" stroke="#A78BFA" stroke-width="2" fill="none"/>
+               <circle cx="12" cy="12" r="2" stroke="#A78BFA" stroke-width="2" fill="none"/>
+    </g>
+    <text x="200" y="262" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Service Registry</text>
+    <text x="200" y="279" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Netflix Eureka</text>
+  </g>
+  <!-- Node: Config Server -->
+  <g>
+    <rect x="770" y="230" width="180" height="70" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="770" y="230" width="180" height="70" rx="12" ry="12" fill="url(#grad-pink)" stroke="#EC4899" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(784, 253)">
+      <circle cx="12" cy="12" r="3" stroke="#EC4899" stroke-width="2" fill="none"/>
+             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="#EC4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <text x="820" y="262" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Config Server</text>
+    <text x="820" y="279" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Spring Cloud Config</text>
+  </g>
+  <!-- Node: Auth Service -->
+  <g>
+    <rect x="150" y="390" width="190" height="80" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="150" y="390" width="190" height="80" rx="12" ry="12" fill="url(#grad-green)" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(164, 418)">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="#10B981" stroke-width="2" fill="none"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#10B981" stroke-width="2" fill="none"/>
+    </g>
+    <text x="200" y="427" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Auth Service</text>
+    <text x="200" y="444" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">User Mgmt &amp; JWT</text>
+  </g>
+  <!-- Node: Student Service -->
+  <g>
+    <rect x="455" y="390" width="190" height="80" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="455" y="390" width="190" height="80" rx="12" ry="12" fill="url(#grad-green)" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(469, 418)">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#10B981" stroke-width="2" fill="none"/>
+                       <circle cx="9" cy="7" r="4" stroke="#10B981" stroke-width="2" fill="none"/>
+                       <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#10B981" stroke-width="2"/>
+                       <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#10B981" stroke-width="2"/>
+    </g>
+    <text x="505" y="427" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Student Service</text>
+    <text x="505" y="444" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Profiles &amp; Classes</text>
+  </g>
+  <!-- Node: Grade Service -->
+  <g>
+    <rect x="760" y="390" width="190" height="80" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="760" y="390" width="190" height="80" rx="12" ry="12" fill="url(#grad-green)" stroke="#10B981" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(774, 418)">
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                     <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" stroke="#10B981" stroke-width="2" fill="none"/>
+    </g>
+    <text x="810" y="427" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Grade Service</text>
+    <text x="810" y="444" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Grades &amp; Reports</text>
+  </g>
+  <!-- Node: Auth Database -->
+  <g>
+    <rect x="155" y="540" width="180" height="65" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="155" y="540" width="180" height="65" rx="12" ry="12" fill="url(#grad-cyan)" stroke="#06B6D4" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(169, 560)">
+      <ellipse cx="12" cy="5" rx="9" ry="3" stroke="#06B6D4" stroke-width="2" fill="none"/>
+             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="#06B6D4" stroke-width="2" fill="none"/>
+             <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" stroke="#06B6D4" stroke-width="2" fill="none"/>
+    </g>
+    <text x="205" y="569" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Auth Database</text>
+    <text x="205" y="586" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">PostgreSQL</text>
+  </g>
+  <!-- Node: Student DB -->
+  <g>
+    <rect x="415" y="540" width="130" height="65" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="415" y="540" width="130" height="65" rx="12" ry="12" fill="url(#grad-cyan)" stroke="#06B6D4" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(429, 560)">
+      <ellipse cx="12" cy="5" rx="9" ry="3" stroke="#06B6D4" stroke-width="2" fill="none"/>
+             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="#06B6D4" stroke-width="2" fill="none"/>
+             <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" stroke="#06B6D4" stroke-width="2" fill="none"/>
+    </g>
+    <text x="465" y="569" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Student DB</text>
+    <text x="465" y="586" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">PostgreSQL</text>
+  </g>
+  <!-- Node: Student Cache -->
+  <g>
+    <rect x="560" y="540" width="110" height="65" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="560" y="540" width="110" height="65" rx="12" ry="12" fill="url(#grad-red)" stroke="#EF4444" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(574, 560)">
+      <polygon points="12 2 2 7 12 12 22 7 12 2" stroke="#EF4444" stroke-width="2" fill="none"/>
+             <polyline points="2 17 12 22 22 17" stroke="#EF4444" stroke-width="2" fill="none"/>
+             <polyline points="2 12 12 17 22 12" stroke="#EF4444" stroke-width="2" fill="none"/>
+    </g>
+    <text x="610" y="569" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Student Cache</text>
+    <text x="610" y="586" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Redis</text>
+  </g>
+  <!-- Node: Grade DB -->
+  <g>
+    <rect x="720" y="540" width="130" height="65" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="720" y="540" width="130" height="65" rx="12" ry="12" fill="url(#grad-cyan)" stroke="#06B6D4" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(734, 560)">
+      <ellipse cx="12" cy="5" rx="9" ry="3" stroke="#06B6D4" stroke-width="2" fill="none"/>
+             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="#06B6D4" stroke-width="2" fill="none"/>
+             <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" stroke="#06B6D4" stroke-width="2" fill="none"/>
+    </g>
+    <text x="770" y="569" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Grade DB</text>
+    <text x="770" y="586" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">PostgreSQL</text>
+  </g>
+  <!-- Node: Grade Cache -->
+  <g>
+    <rect x="865" y="540" width="110" height="65" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="865" y="540" width="110" height="65" rx="12" ry="12" fill="url(#grad-red)" stroke="#EF4444" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(879, 560)">
+      <polygon points="12 2 2 7 12 12 22 7 12 2" stroke="#EF4444" stroke-width="2" fill="none"/>
+             <polyline points="2 17 12 22 22 17" stroke="#EF4444" stroke-width="2" fill="none"/>
+             <polyline points="2 12 12 17 22 12" stroke="#EF4444" stroke-width="2" fill="none"/>
+    </g>
+    <text x="915" y="569" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Grade Cache</text>
+    <text x="915" y="586" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Redis</text>
+  </g>
+  <!-- Node: Apache Kafka -->
+  <g>
+    <rect x="150" y="670" width="800" height="50" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="150" y="670" width="800" height="50" rx="12" ry="12" fill="url(#grad-rose)" stroke="#F43F5E" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(164, 683)">
+      <rect x="2" y="5" width="20" height="14" rx="2" stroke="#F43F5E" stroke-width="2" fill="none"/>
+              <line x1="2" y1="10" x2="22" y2="10" stroke="#F43F5E" stroke-width="2"/>
+              <line x1="2" y1="14" x2="22" y2="14" stroke="#F43F5E" stroke-width="2"/>
+              <line x1="7" y1="5" x2="7" y2="19" stroke="#F43F5E" stroke-width="2"/>
+              <line x1="12" y1="5" x2="12" y2="19" stroke="#F43F5E" stroke-width="2"/>
+              <line x1="17" y1="5" x2="17" y2="19" stroke="#F43F5E" stroke-width="2"/>
+    </g>
+    <text x="200" y="692" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Apache Kafka</text>
+    <text x="200" y="709" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Message Broker &amp; Event Bus</text>
+  </g>
+  <!-- Node: Notification Service -->
+  <g>
+    <rect x="455" y="780" width="190" height="75" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="455" y="780" width="190" height="75" rx="12" ry="12" fill="url(#grad-teal)" stroke="#14B8A6" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(469, 805)">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="#14B8A6" stroke-width="2" fill="none"/>
+             <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#14B8A6" stroke-width="2" fill="none"/>
+    </g>
+    <text x="505" y="814" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Notification Service</text>
+    <text x="505" y="831" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">Event Handler &amp; Dispatch</text>
+  </g>
+  <!-- Node: Telegram Bot API -->
+  <g>
+    <rect x="760" y="780" width="190" height="75" rx="12" ry="12" fill="#000000" opacity="0.4" />
+    <rect x="760" y="780" width="190" height="75" rx="12" ry="12" fill="url(#grad-sky)" stroke="#38BDF8" stroke-width="1.8" stroke-opacity="0.9" />
+    <g transform="translate(774, 805)">
+      <line x1="22" y1="2" x2="11" y2="13" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <text x="810" y="814" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="system-ui, sans-serif">Telegram Bot API</text>
+    <text x="810" y="831" fill="rgba(255,255,255,0.45)" font-size="10" font-family="system-ui, sans-serif">External Chat Alert API</text>
+  </g>
+</svg>
